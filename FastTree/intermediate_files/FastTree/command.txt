@@ -1,0 +1,1 @@
+FastTree -gamma -nt -gtr -out /Users/sarahmeng/ViReport/FastTree/output_files/unrooted.tre
