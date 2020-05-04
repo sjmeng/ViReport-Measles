@@ -1,0 +1,10 @@
+=== INPUTS ===
+Input File:  /Users/sarahmeng/ViReport/outputdir/intermediate_files/TreeN93/treen93.tre
+Output File: /Users/sarahmeng/ViReport/outputdir/output_files/transmission_clusters.tsv
+Mode:        max_non_singleton
+
+=== RESULTS ===
+Computing transmission clusters...
+Optimal Threshold: 0.003828
+Number of Non-Singleton Clusters: 11
+Total runtime: 0.003258228302001953 seconds
