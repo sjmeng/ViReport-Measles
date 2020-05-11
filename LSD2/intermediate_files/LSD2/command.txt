@@ -1,0 +1,1 @@
+lsd2 -l 0 -u 0 -U 0 -c -s 19811 -i /Users/sarahmeng/ViReport/outputdir/output_files/rooted.tre -d /Users/sarahmeng/ViReport/outputdir/intermediate_files/LSD2/times_lsd.txt

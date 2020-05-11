@@ -1,0 +1,7 @@
+=== INPUTS ===
+Input File:  /Users/sarahmeng/ViReport/outputdir/output_files/pairwise_distances_phylogeny.csv
+Output File: /Users/sarahmeng/ViReport/outputdir/intermediate_files/TreeN93/treen93.tre
+
+=== COMPUTE TREEN93 TREE ===
+Number of Individuals: 282
+Total runtime: 0.9411158561706543 seconds

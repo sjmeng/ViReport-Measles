@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\title{\vspace{-2.0cm}ViReport v0.0.1}
+\author{Niema Moshiri}
+\date{2020-05-11}
+\begin{document}
+\maketitle
+
+\section{Input Dataset}
+The analysis was conducted on a dataset containing 282 sequences. The average sequence length was 14982.543, with a standard deviation of 2555.171. The earliest sample date was 1977-01-01, the median sample date was 2009-01-01, and the most recent sample date was 2018-10-01.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth,keepaspectratio]{./figs/input_sequence_lengths.pdf}
+\caption{Distribution of input sequence lengths}
+\end{figure}
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth,keepaspectratio]{./figs/input_sample_dates.pdf}
+\caption{Distribution of input sample dates}
+\end{figure}
+
+\section{Preprocessed Dataset}
+The input dataset was preprocessed such that sequences were given safe names: non-letters/digits in sequence IDs were converted to underscores. After preprocessing, the dataset contained 282 sequences. The average sequence length was 14982.543, with a standard deviation of 2555.171. The earliest sample date was 1977-01-01, the median sample date was 2009-01-01, and the most recent sample date was 2018-10-01.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth,keepaspectratio]{./figs/processed_sequence_lengths.pdf}
+\caption{Distribution of preprocessed sequence lengths}
+\end{figure}
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth,keepaspectratio]{./figs/processed_sample_dates.pdf}
+\caption{Distribution of preprocessed sample dates}
+\end{figure}
+
+\section{Multiple Sequence Alignment}
+Multiple sequence alignment was performed using MAFFT (Katoh \& Standley, 2013) in automatic mode. There were 19811 positions (9741 invariant) and 232 unique sequences in the multiple sequence alignment. Pairwise distances were computed from the multiple sequence alignment using the tn93 tool of HIV-TRACE (Pond et al., 2018). The average pairwise sequence distance was 0.11, with a standard deviation of 0.238.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth,keepaspectratio]{./figs/pairwise_distances_sequences.pdf}
+\caption{Distribution of pairwise sequence distances}
+\end{figure}
+
+Across the positions of the multiple sequence alignment, the minimum coverage was 0.00355, the maximum coverage was 0.986, and the average coverage was 0.756, with a standard deviation of 0.366.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth,keepaspectratio]{./figs/alignment_coverage.pdf}
+\caption{Coverage (proportion of non-gap characters) across the positions of the multiple sequence alignment}
+\end{figure}
+
+ Across the positions of the multiple sequence alignment that had non-zero Shannon entropy, the minimum Shannon entropy was 0.0344, the maximum Shannon entropy was 1.572, and the average Shannon entropy was 0.322, with a standard deviation of 0.234.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth,keepaspectratio]{./figs/alignment_entropies.pdf}
+\caption{Shannon entropy across the positions of the multiple sequence alignment. A significance threshold was computed using Tukey's Rule: 1.5x the interquartile range added to the third quartile, which was 0.677. The significance threshold is shown as a red dashed line, and significant points are shown in red.}
+\end{figure}
+
+\section{Phylogenetic Inference}
+A maximum-likelihood phylogeny was inferred using IQ-TREE (Nguyen et al., 2015) in ModelFinder Plus mode (Kalyaanamoorthy et al., 2017). The inferred phylogeny was MinVar-rooted using FastRoot (Mai et al., 2017).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\textwidth,height=1\textheight,keepaspectratio]{./figs/tree_mutations.pdf}
+\caption{Rooted phylogenetic tree in unit of expected per-site mutations}
+\end{figure}
+
+Pairwise distances were computed from the phylogeny using TreeSwift (Moshiri, 2020). The maximum pairwise phylogenetic distance (i.e., tree diameter) was 3.0553, and the average pairwise phylogenetic distance was 0.286, with a standard deviation of 0.814.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth,keepaspectratio]{./figs/pairwise_distances_tree.pdf}
+\caption{Distribution of pairwise phylogenetic distances}
+\end{figure}
+
