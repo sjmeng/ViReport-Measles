@@ -1,0 +1,1 @@
+mafft --reorder --nomemsave --auto /Users/sarahmeng/ViReport/IQTREEMFP/output_files/sequences_safe.fas

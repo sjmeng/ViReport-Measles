@@ -1,0 +1,42 @@
+/--------------------\
+|  ViReport v0.0.1   |
+| Niema Moshiri 2020 |
+\--------------------/
+
+========================   Workflow Process   ========================
+[2020-05-18 09:32:27] ViReport was run as follows: ./ViReport.py -s ../labfiles/checkedSeq.fasta -t ../labfiles/measles_times.tsv -o IQTREEMFP --phylo IQTREEMFP
+[2020-05-18 09:32:27] Output directory: /Users/sarahmeng/ViReport/IQTREEMFP
+[2020-05-18 09:32:27] Starting viral analysis workflow...
+
+[2020-05-18 09:32:27] Initializing module implementations...
+[2020-05-18 09:32:27] Finished initializing 13 module implementations
+
+[2020-05-18 09:32:27] Running 'Preprocessing_SafeNames'...
+[2020-05-18 09:32:27] Preprocessed sequences output to: /Users/sarahmeng/ViReport/IQTREEMFP/output_files/sequences_safe.fas
+[2020-05-18 09:32:27] Preprocessed sample times output to: /Users/sarahmeng/ViReport/IQTREEMFP/output_files/times_safe.txt
+
+[2020-05-18 09:32:27] Running 'MultipleSequenceAlignment_MAFFT'...
+[2020-05-18 09:32:41] Multiple sequence alignment output to: /Users/sarahmeng/ViReport/IQTREEMFP/output_files/sequences_safe.aln
+
+[2020-05-18 09:32:41] Running 'PairwiseDistancesSequence_tn93'...
+[2020-05-18 09:32:41] Pairwise sequence distances output to: /Users/sarahmeng/ViReport/IQTREEMFP/output_files/pairwise_distances_sequence.csv
+
+[2020-05-18 09:32:41] Running 'PhylogeneticInference_IQTREEMFP'...
+[2020-05-18 09:36:37] Inferred (unrooted) phylogeny output to: /Users/sarahmeng/ViReport/IQTREEMFP/output_files/unrooted.tre
+
+[2020-05-18 09:36:37] Running 'PairwiseDistancesTree_TreeSwift'...
+[2020-05-18 09:36:37] Pairwise phylogenetic distances output to: /Users/sarahmeng/ViReport/IQTREEMFP/output_files/pairwise_distances_phylogeny.csv
+
+[2020-05-18 09:36:37] Running 'Rooting_MinVar'...
+[2020-05-18 09:36:37] Rooted phylogeny output to: /Users/sarahmeng/ViReport/IQTREEMFP/output_files/rooted.tre
+
+[2020-05-18 09:36:37] Running 'Dating_treedater'...
+[2020-05-18 09:36:37] Dated phylogeny output to: /Users/sarahmeng/ViReport/IQTREEMFP/output_files/dated.tre
+
+[2020-05-18 09:36:37] Running 'AncestralSequenceReconstruction_TreeTime'...
+[2020-05-18 09:36:41] Ancestral sequence(s) output to: /Users/sarahmeng/ViReport/IQTREEMFP/output_files/ancestral_sequences.fas
+
+[2020-05-18 09:36:41] Running 'TransmissionClustering_TreeN93TreeDists'...
+[2020-05-18 09:36:41] Transmission clusters output to: /Users/sarahmeng/ViReport/IQTREEMFP/output_files/transmission_clusters.tsv
+
+[2020-05-18 09:36:41] Writing report using 'WriteReport_Default'...
