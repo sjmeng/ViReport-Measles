@@ -1,0 +1,42 @@
+/--------------------\
+|  ViReport v0.0.1   |
+| Niema Moshiri 2020 |
+\--------------------/
+
+========================   Workflow Process   ========================
+[2020-05-18 09:20:51] ViReport was run as follows: ./ViReport.py -s ../labfiles/checkedSeq.fasta -t ../labfiles/measles_times.tsv -o TreeTime --date TreeTime
+[2020-05-18 09:20:51] Output directory: /Users/sarahmeng/ViReport/TreeTime
+[2020-05-18 09:20:51] Starting viral analysis workflow...
+
+[2020-05-18 09:20:51] Initializing module implementations...
+[2020-05-18 09:20:51] Finished initializing 13 module implementations
+
+[2020-05-18 09:20:51] Running 'Preprocessing_SafeNames'...
+[2020-05-18 09:20:51] Preprocessed sequences output to: /Users/sarahmeng/ViReport/TreeTime/output_files/sequences_safe.fas
+[2020-05-18 09:20:51] Preprocessed sample times output to: /Users/sarahmeng/ViReport/TreeTime/output_files/times_safe.txt
+
+[2020-05-18 09:20:51] Running 'MultipleSequenceAlignment_MAFFT'...
+[2020-05-18 09:21:05] Multiple sequence alignment output to: /Users/sarahmeng/ViReport/TreeTime/output_files/sequences_safe.aln
+
+[2020-05-18 09:21:05] Running 'PairwiseDistancesSequence_tn93'...
+[2020-05-18 09:21:05] Pairwise sequence distances output to: /Users/sarahmeng/ViReport/TreeTime/output_files/pairwise_distances_sequence.csv
+
+[2020-05-18 09:21:05] Running 'PhylogeneticInference_IQTREEMFP'...
+[2020-05-18 09:28:05] Inferred (unrooted) phylogeny output to: /Users/sarahmeng/ViReport/TreeTime/output_files/unrooted.tre
+
+[2020-05-18 09:28:05] Running 'PairwiseDistancesTree_TreeSwift'...
+[2020-05-18 09:28:05] Pairwise phylogenetic distances output to: /Users/sarahmeng/ViReport/TreeTime/output_files/pairwise_distances_phylogeny.csv
+
+[2020-05-18 09:28:05] Running 'Rooting_MinVar'...
+[2020-05-18 09:28:05] Rooted phylogeny output to: /Users/sarahmeng/ViReport/TreeTime/output_files/rooted.tre
+
+[2020-05-18 09:28:05] Running 'Dating_TreeTime'...
+[2020-05-18 09:28:14] Dated phylogeny output to: /Users/sarahmeng/ViReport/TreeTime/output_files/dated.tre
+
+[2020-05-18 09:28:14] Running 'AncestralSequenceReconstruction_TreeTime'...
+[2020-05-18 09:28:18] Ancestral sequence(s) output to: /Users/sarahmeng/ViReport/TreeTime/output_files/ancestral_sequences.fas
+
+[2020-05-18 09:28:18] Running 'TransmissionClustering_TreeN93TreeDists'...
+[2020-05-18 09:28:18] Transmission clusters output to: /Users/sarahmeng/ViReport/TreeTime/output_files/transmission_clusters.tsv
+
+[2020-05-18 09:28:18] Writing report using 'WriteReport_Default'...
